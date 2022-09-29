@@ -6,10 +6,16 @@ import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 import { useAuthContext } from '../hooks/useAuthContext';
+import {useLogout} from "../hooks/useLogout"
 
 const UserProfile = () => {
   const { currentColor } = useStateContext();
   const {user} = useAuthContext()
+  const {logout} = useLogout()
+
+  const handleClick = ()=>{
+    logout()
+  }
 
   return (
     <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
@@ -54,13 +60,15 @@ const UserProfile = () => {
         ))}
       </div>
       <div className="mt-5">
-        <Button
-          color="white"
-          bgColor={currentColor}
-          text="Logout"
-          borderRadius="10px"
-          width="full"
-        />
+        <button
+          style={{
+          'color':"white",
+          'background':{currentColor},
+          'borderRadius':"10px",
+          'width':"full"
+          }}
+          onClick={handleClick}
+        >Logout</button>
       </div>
     </div>
 
