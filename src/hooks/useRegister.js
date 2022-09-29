@@ -12,9 +12,9 @@ export const useRegister = () => {
   
     setIsLoading(true)
     setError(null)
-
-    // const response = await axios.get('/register', { username, password  })
-    const response = await fetch('http://localhost:5000/api/user/register', {
+    
+    const response = await fetch('https://studycardsserver.herokuapp.com/api/user/register', {
+    // const response = await fetch('http://localhost:5000/api/user/register', {
         method: 'POST',
         headers: {'Content-Type': 'application/json',
         'Accept': 'application/json'},
@@ -37,7 +37,7 @@ export const useRegister = () => {
 
       // update loading state
       setIsLoading(false)
-      navigate("/home")
+      navigate("/")
     }
   }
 
