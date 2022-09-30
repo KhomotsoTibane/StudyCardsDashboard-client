@@ -13,9 +13,10 @@ export const ContextProvider = ({ children }) => {
   //used to check screen size and decide if the navbar must be shown or not
   const [screenSize, setScreenSize] = useState(undefined);
   
-  //theme color
+  // default theme color
   const [currentColor, setCurrentColor] = useState('#03C9D7');
-
+  
+  
   //dark mode or light mode
   const [currentMode, setCurrentMode] = useState('Light');
   const [themeSettings, setThemeSettings] = useState(false);

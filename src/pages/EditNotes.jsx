@@ -98,7 +98,7 @@ function EditNotes() {
     })
 
     if (response.ok) {
-      navigate("/")
+      navigate("/home")
     }
   }
 

@@ -5,10 +5,12 @@ import { BsCurrencyDollar, BsShield } from 'react-icons/bs';
 import { BiHome, BiEdit, BiSlideshow } from 'react-icons/bi'
 import { MdOutlineCreate } from 'react-icons/md'
 import { BiColorFill } from 'react-icons/bi';
+
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
+import product9 from './product9.jpg'
 
 
 export const links = [
@@ -29,10 +31,6 @@ export const links = [
         name: 'create',
         icon: <MdOutlineCreate />,
       },
-      // {
-      //   name: 'edit',
-      //   icon: <BiEdit />,
-      // },
       {
         name: 'collections',
         icon: <BiSlideshow />,
@@ -46,10 +44,10 @@ export const links = [
         name: 'calendar',
         icon: <AiOutlineCalendar />,
       },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
+      // {
+      //   name: 'color-picker',
+      //   icon: <BiColorFill />,
+      // },
     ],
   },
 ];

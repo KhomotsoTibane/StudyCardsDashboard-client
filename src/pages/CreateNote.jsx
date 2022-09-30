@@ -92,7 +92,7 @@ function CreateNote(props) {
       setCreateNotes('')
       setNote('')
       dispatch({ type: 'CREATE_NOTES', payload: json })
-      navigate("/")
+      navigate("/home")
     }
   }
 

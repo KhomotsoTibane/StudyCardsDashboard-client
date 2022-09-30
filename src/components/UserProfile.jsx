@@ -2,7 +2,7 @@ import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
 import { Button } from '.';
-import { userProfileData } from '../data/dummy';
+import { userProfileData } from '../data/appdata';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 import { useAuthContext } from '../hooks/useAuthContext';
@@ -37,7 +37,6 @@ const UserProfile = () => {
         />
         <div>
           <p className="font-semibold text-xl dark:text-gray-200"> {user.username} </p>
-          <p className="text-gray-500 text-sm dark:text-gray-400">  Administrator   </p>
           <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> {user.email} </p>
         </div>
       </div>
@@ -61,11 +60,10 @@ const UserProfile = () => {
       </div>
       <div className="mt-5">
         <button
+          className="font-semibold dark:text-gray-200 w-full p-4 text-xl"
           style={{
-          'color':"white",
-          'background':{currentColor},
+          'backgroundColor':currentColor,
           'borderRadius':"10px",
-          'width':"full"
           }}
           onClick={handleClick}
         >Logout</button>

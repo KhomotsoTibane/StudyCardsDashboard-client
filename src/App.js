@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components/index';
-import { Calendar, ColorPicker, Collections, CreateNote, EditNotes, ViewNotes, Login, Register } from './pages/index';
+import { Calendar, ColorPicker, Collections, CreateNote, EditNotes, ViewNotes, Login, Register, Home, PageNotFound } from './pages/index';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -70,11 +70,11 @@ const App = () => {
               {themeSettings && (<ThemeSettings />)}
               <Routes>
                 {/* auth */}
-                <Route path='/login' element={!user ? <Login /> : <Navigate to='/'/>} />
-                <Route path='/register' element={!user ? <Register /> : <Navigate to='/'/>} />
+                <Route path='/login' element={!user ? <Login /> : <Navigate to='/home'/>} />
+                <Route path='/register' element={!user ? <Register /> : <Navigate to='/home'/>} />
 
                 {/* dashboard */}
-                <Route path='/'  element={ user ? 'home': <Navigate to='/login'/>}  />
+                <Route path='/home'  element={ user ? <Home/> : <Navigate to='/login'/>}  />
 
 
                 {/* pages */}
@@ -85,8 +85,10 @@ const App = () => {
 
                 {/* apps */}
                 <Route path='/calendar' element={ user ? <Calendar /> : <Navigate to='/login'/>} />
-                <Route path='/color-picker' element={ user ? <ColorPicker /> : <Navigate to='/login'/>} />
+                {/* <Route path='/color-picker' element={ user ? <ColorPicker /> : <Navigate to='/login'/>} /> */}
 
+                {/* 404 not found */}
+                <Route path="*" element={<PageNotFound />} />
               </Routes>
             </div>
             <Footer />

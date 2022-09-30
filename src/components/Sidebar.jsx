@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { TbLayoutCards } from 'react-icons/tb';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { links } from '../data/dummy';
+import { links } from '../data/appdata';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {

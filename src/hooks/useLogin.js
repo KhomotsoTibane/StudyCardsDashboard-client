@@ -45,7 +45,7 @@ export const useLogin = () => {
 
       // update loading state
       setIsLoading(false)
-      navigate("/")
+      navigate("/home")
     }
   }
 
