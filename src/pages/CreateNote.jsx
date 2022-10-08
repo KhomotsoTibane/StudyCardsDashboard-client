@@ -21,7 +21,7 @@ import { Header } from '../components';
 function CreateNote(props) {
 
   const { dispatch } = useNotesContext()
-  const { currentColor, currentMode } = useStateContext();
+  const { currentColor} = useStateContext();
   const { user } = useAuthContext()
 
   let navigate = useNavigate();
@@ -125,7 +125,7 @@ function CreateNote(props) {
     <Header category="Cards" title="Create" />
     <div className="mt-6" >
       <div className="flex flex-col  justify-center items-center">
-        <form className=" flex text-center w-96">
+        <form className=" flex text-center w-80">
           <input
             name="Topic"
             onChange={handleTopic}
@@ -144,7 +144,7 @@ function CreateNote(props) {
         </form>
 
         {(topic === "") ? null :
-          <form className="relative p-4 w-96 ">
+          <form className="relative p-4 w-80 ">
             {isExpanded && (
               <input
                 name="title"

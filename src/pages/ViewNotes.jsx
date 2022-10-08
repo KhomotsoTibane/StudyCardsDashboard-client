@@ -4,7 +4,7 @@
 -get notes from localhost
 */
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FlashcardArray } from "react-quizlet-flashcard";
 import { Header } from '../components';
 

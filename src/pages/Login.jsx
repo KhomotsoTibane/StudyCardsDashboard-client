@@ -23,7 +23,13 @@ const Login = () => {
   }
 
   return (
-    <section className="h-screen">
+    <section className="h-screen relative">
+
+
+      <div>
+      <h5 className="text-md font-medium leading-normal text-gray-800 text-right">admin@admin.com  </h5>
+      <h5 className="text-md font-medium leading-normal text-gray-800 text-right">Khomotso@admin123* </h5>
+      </div>
       <div className="px-6 h-full text-gray-800">
         <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6" >
           <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0" >
@@ -57,8 +63,6 @@ const Login = () => {
 
                 <button
                   type="button"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
                   className="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md
                    hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 
                    active:shadow-lg transition duration-150 ease-in-out mx-1"
@@ -75,8 +79,6 @@ const Login = () => {
 
                 <button
                   type="button"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
                   className="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md
                    hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 
                    active:shadow-lg transition duration-150 ease-in-out mx-1"

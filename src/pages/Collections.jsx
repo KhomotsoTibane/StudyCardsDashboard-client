@@ -85,21 +85,21 @@ const Collections = () => {
   }
 
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl relative">
+    <div className=" flex flex-col m-2 md:m-10 mt-24 p-2 md:p-6 bg-white rounded-3xl">
       <Header category="Page" title="Collections" />
-      <table className="min-w-full">
+      <table className="table-auto">
         <thead className="bg-white border-b">
           <tr>
-            <th scope="col" className=" font-medium text-gray-900 px-6 py-4 text-left">
+            <th scope="col" className="text-base text-gray-900  text-left lg:px-4 lg:py-4 sm:px-1 sm:py-1">
               Title
             </th>
-            <th scope="col" className=" font-medium text-gray-900 px-6 py-4 text-left">
+            <th scope="col" className="text-base text-gray-900 text-left lg:px-4 lg:py-4 sm:px-1 sm:py-1">
               Created
             </th>
-            <th scope="col" className=" font-medium text-gray-900 px-6 py-4 text-left">
+            <th scope="col" className="text-base text-gray-900 text-left lg:px-4 lg:py-4 sm:px-1 sm:py-1">
               Updated
             </th>
-            <th scope="col" className=" font-medium text-gray-900 px-6 py-4 text-center">
+            <th scope="col" className="text-base text-gray-900 text-center lg:px-4 lg:py-4 sm:px-1 sm:py-1">
               Action
             </th>
           </tr>
@@ -108,17 +108,17 @@ const Collections = () => {
           {notes && notes.map((collection, i) => {
             return (
               <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100" key={i}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{collection.topic}</td>
-                <td className=" text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <td className=" whitespace-nowrap text-sm text-gray-900 lg:px-4 lg:py-4 sm:px-1 sm:py-1 break-all">{collection.topic}</td>
+                <td className=" text-gray-900 font-light whitespace-nowrap lg:px-4 lg:py-4 sm:px-1 sm:py-1">
                   {formatDistanceToNow(new Date(collection.createdAt), { addSuffix: true })}
                 </td>
-                <td className=" text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <td className=" text-gray-900 font-light whitespace-nowrap lg:px-4 lg:py-4 sm:px-1 sm:py-1">
                   {formatDistanceToNow(new Date(collection.updatedAt), { addSuffix: true })}
                 </td>
-                <td className=" text-gray-900 font-light px-6 py-4 whitespace-nowrap flex justify-between">
-                  <button onClick={() => handleView(i)} className="btn btn-primary"><BiSlideshow /></button>
-                  <button onClick={() => handleEdit(i)} className=" btn-warning"><BiEdit /></button>
-                  <button onClick={() => handleShow(i)} className="btn btn-danger " ><BsFillTrashFill /></button>
+                <td className=" text-gray-900 font-light lg:px-4 lg:py-4 whitespace-nowrap flex justify-between sm:px-1 sm:py-1">
+                  <button onClick={() => handleView(i)} className="px1"><BiSlideshow /></button>
+                  <button onClick={() => handleEdit(i)} className="px-1"><BiEdit /></button>
+                  <button onClick={() => handleShow(i)} className="px-1" ><BsFillTrashFill /></button>
                 </td>
               </tr>
             )

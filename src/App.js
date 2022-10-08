@@ -24,7 +24,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className={`${currentMode === 'Dark' ? 'dark' : ''} h-screen`} >
+    <div className={`${currentMode === 'Dark' ? 'dark' : ''} h-screen w-screen`} >
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           {user  ? <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -74,6 +74,7 @@ const App = () => {
                 <Route path='/register' element={!user ? <Register /> : <Navigate to='/home'/>} />
 
                 {/* dashboard */}
+                <Route path="/" element={<Navigate to="/collections" />} />
                 <Route path='/home'  element={ user ? <Home/> : <Navigate to='/login'/>}  />
 
 

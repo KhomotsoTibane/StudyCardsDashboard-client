@@ -3,7 +3,7 @@ import { Updates } from '../components';
 
 const Home = () => {
   return (
-        <div>
+        <div className='w-auto'>
           <Updates/>
         </div>
   );

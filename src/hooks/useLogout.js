@@ -8,8 +8,6 @@ export const useLogout = ()=>{
         //remove user from storage
         localStorage.removeItem('user')
         
-        // axios.post("/logout",{}, {withCredentials:true})
-        
         //dispatch logout action
         dispatch({type:'LOGOUT'})
     }
