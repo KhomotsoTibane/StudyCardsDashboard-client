@@ -20,7 +20,7 @@ import { Header } from '../components';
 function EditNotes() {
 
   const { user } = useAuthContext()
-  const { currentColor, currentMode } = useStateContext();
+  const { currentColor} = useStateContext();
   // notes that will be edited which were selected by user from the home page
   const [notesToEdit] = useState(JSON.parse(localStorage.getItem("notes")))
   let navigate = useNavigate();
@@ -87,8 +87,8 @@ function EditNotes() {
     notesToEdit.item = notes;
     notesToEdit.topic = topic;
 
-    const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/update/' + notesToEdit._id, {
-    // const response = await fetch('http://localhost:5000/api/collections/update/' + notesToEdit._id, {
+    // const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/update/' + notesToEdit._id, {
+    const response = await fetch('http://localhost:5000/api/collections/update/' + notesToEdit._id, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

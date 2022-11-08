@@ -11,7 +11,7 @@ const Updates = () => {
             <div className="flex flex-wrap justify-center">
                 <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
                     <div className="flex justify-between">
-                        <p className="text-xl font-semibold">Updates</p>
+                        <p className="text-xl font-semibold">Welcome to StudyCards</p>
                     </div>
                     <div className="mt-10">
                         <img
@@ -20,10 +20,13 @@ const Updates = () => {
                             alt=""
                         />
                         <div className="mt-8">
-                            <p className="font-semibold text-lg">More functionality coming soon!</p>
-                            <p className="text-gray-400 ">By Khomotso Tibane and StudyCards</p>
-                            <p className="mt-8 text-sm text-gray-400">
-                                We are working on some  new features for you to enjoy, check out our Card and App section while you wait.
+                            <h1 className="font-semibold text-lg">Updates:</h1>
+                            <p className="font-semibold text-lg">We have more functionality coming soon!</p>
+                            <p className="mt-8 text-gray-400">
+                                You are currently viewing StudyCards beta version.
+                                We are currently testing and working on some new features for you to enjoy but we could not contain our excitement
+                                for you to check out our awesome application made just for you.
+                                While you are here, please check out our Card and App section to get feel of what is to come.
                             </p>
                             {/* <p className="mt-8 text-sm text-gray-400">
                                 Subcribe to our mailing list to be the first to know about any updates in future

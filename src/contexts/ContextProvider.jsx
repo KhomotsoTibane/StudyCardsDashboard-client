@@ -38,7 +38,7 @@ export const ContextProvider = ({ children }) => {
   *activate the component on click
   *clicked- element that was clicked, spread initial state and change the clicked value to true
   */ 
-  const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
+  const handleClick = (isClicked) => setIsClicked({ ...initialState, [isClicked]: true });
 
   return (
     <StateContext.Provider value={{ currentColor, currentMode, activeMenu, screenSize, setScreenSize, handleClick, isClicked, initialState, setIsClicked, setActiveMenu, setCurrentColor, setCurrentMode, setMode, setColor, themeSettings, setThemeSettings }}>

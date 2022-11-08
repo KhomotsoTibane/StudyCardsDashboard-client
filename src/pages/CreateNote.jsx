@@ -71,8 +71,8 @@ function CreateNote(props) {
       return
     }
 
-    const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/create',{
-    // const response = await fetch('http://localhost:5000/api/collections/create', {
+    // const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/create',{
+    const response = await fetch('http://localhost:5000/api/collections/create', {
       method: 'POST',
       body: JSON.stringify({ topic, createNotes }),
       headers: {
@@ -168,7 +168,7 @@ function CreateNote(props) {
             <Zoom in={isExpanded} style={{
               position: 'absolute',
               right: '10px',
-              bottom: '-3px',
+              bottom: '1px',
               color: '#fff',
               width: '36px',
               height: '36px',
