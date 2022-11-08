@@ -11,7 +11,6 @@
     "@syncfusion/ej2-react-calendars": "^19.4.48",
     "@syncfusion/ej2-react-dropdowns": "^19.4.52",
     "@syncfusion/ej2-react-grids": "^19.4.50",
-    "@syncfusion/ej2-react-inputs": "^20.3.47",
     "@syncfusion/ej2-react-popups": "^19.4.52",
     "@syncfusion/ej2-react-schedule": "^19.4.50",
     "@testing-library/jest-dom": "^5.16.5",
