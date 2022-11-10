@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components/index';
-import { Calendar, Collections, CreateNote, EditNotes, ViewNotes, Login, Register, Home, PageNotFound } from './pages/index';
+import { Calendar, Collections, CreateNote, EditNotes, ViewNotes, Login, Register, Home , PageNotFound } from './pages/index';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -77,7 +77,7 @@ const App = () => {
                 <Route path='/register' element={!user ? <Register /> : <Navigate to='/home' />} />
 
                 {/* dashboard */}
-                <Route path="/" element={<Navigate to="/collections" />} />
+                <Route path="/" element={!user ? <Login /> : <Navigate to="/home" />} />
                 <Route path='/home' element={user ? <Home /> : <Navigate to='/login' />} />
 
 
@@ -85,10 +85,10 @@ const App = () => {
                 <Route path='/create' element={user ? <CreateNote /> : <Navigate to='/login' />} />
                 <Route path='/edit' element={user ? <EditNotes /> : <Navigate to='/login' />} />
                 <Route path='/view' element={user ? <ViewNotes /> : <Navigate to='/login' />} />
-                <Route path='/collections' element={<Collections />} />
+                <Route path='/collections' element={user ? <Collections /> : <Navigate to ="/login"/>} />
 
                 {/* apps */}
-                <Route path='/calendar' element={user ? <Calendar /> : <Navigate to='/login' />} />
+                <Route path='/todo-List' element={user && <Navigate to='/home' />} />
       
 
                 {/* 404 not found */}

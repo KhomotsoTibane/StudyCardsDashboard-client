@@ -71,8 +71,8 @@ function CreateNote(props) {
       return
     }
 
-    // const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/create',{
-    const response = await fetch('http://localhost:5000/api/collections/create', {
+    const response = await fetch('https://studyserver.onrender.com/api/collections/create',{
+    // const response = await fetch('http://localhost:5000/api/collections/create', {
       method: 'POST',
       body: JSON.stringify({ topic, createNotes }),
       headers: {

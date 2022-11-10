@@ -2,16 +2,12 @@ import React from 'react';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { FiCreditCard } from 'react-icons/fi';
 import { BsCurrencyDollar, BsShield } from 'react-icons/bs';
-import { BiHome, BiEdit, BiSlideshow } from 'react-icons/bi'
+import { BiHome, BiSlideshow } from 'react-icons/bi'
 import { MdOutlineCreate } from 'react-icons/md'
-import { BiColorFill } from 'react-icons/bi';
 
-import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
-import product9 from './product9.jpg'
-
 
 export const links = [
   {
@@ -41,13 +37,9 @@ export const links = [
     title: 'Apps',
     links: [
       {
-        name: 'calendar',
+        name: 'todo-List',
         icon: <AiOutlineCalendar />,
-      },
-      // {
-      //   name: 'color-picker',
-      //   icon: <BiColorFill />,
-      // },
+      }
     ],
   },
 ];
@@ -55,32 +47,26 @@ export const links = [
 export const chatData = [
   {
     image:
-      avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
+      avatar4,
+    message: 'New message received',
+    desc: 'James sent you new message',
     time: '9:08 AM',
   },
   {
     image:
       avatar3,
     message: 'New message received',
-    desc: 'Salma sent you new message',
+    desc: 'Ivan sent you new message',
     time: '11:56 AM',
   },
   {
     image:
-      avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
+      avatar2,
+      message: 'New message received',
+      desc: 'Marissa sent you new message',
     time: '4:39 AM',
-  },
-  {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
-  },
+  }
+
 ];
 
 export const themeColors = [

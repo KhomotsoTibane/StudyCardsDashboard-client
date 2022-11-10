@@ -87,8 +87,8 @@ function EditNotes() {
     notesToEdit.item = notes;
     notesToEdit.topic = topic;
 
-    // const response = await fetch('https://studycardsserver.herokuapp.com/api/collections/update/' + notesToEdit._id, {
-    const response = await fetch('http://localhost:5000/api/collections/update/' + notesToEdit._id, {
+    const response = await fetch('https://studyserver.onrender.com/api/collections/update/' + notesToEdit._id, {
+    // const response = await fetch('http://localhost:5000/api/collections/update/' + notesToEdit._id, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
